@@ -11,7 +11,7 @@ A group of Lambda functions for:
 
 `token`: your Logz.io account token. Can be retrieved on the Settings page in the Logz.io UI.
 `logstash_host`: if you are in the EU region insert `listener-eu.logz.io`, otherwise, use `listener.logz.io`. You can tell which region you are in by checking your login URL - app.logz.io means you are in the US. app-eu.logz.io means you are in the EU.
-`logstash_port`: this should be 5050, but is subject to change. See [this](https://app.logz.io/#/dashboard/data-sources/logstash) page for details.
+`logstash_port`: Allowed outgoing traffic to the destination port 8070 for HTTP (default) or 8071 for HTTPS, but is subject to change. See [this](https://app.logz.io/#/dashboard/data-sources/nodejs) page for details.
 
 for example:
 
@@ -21,7 +21,8 @@ ship-logs-to-logzio:
   description: Sends CloudWatch logs to Logz.io
   environment:
     logstash_host: listener.logz.io
-    logstash_port: 5050
+    logstash_port: 8071
+    logstash_protocol: https
     token: CduNgGwuFFeUVzbXvqVDXoGkjxEdKzc9
 ```
 

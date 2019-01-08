@@ -11,7 +11,10 @@
   "dependencies": {
     "aws-sdk": "^2.213.1",
     "bluebird": "^3.5.0",
-    "co": "^4.6.0"
+    "co": "^4.6.0",
+    "logzio-nodejs": "^1.0.3",
+    "net": "^1.0.2",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "serverless": "^1.20.2",
